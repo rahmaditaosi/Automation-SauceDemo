@@ -11,7 +11,9 @@ export async function safeFindElement(driver, locator, timeout = 10000, screensh
   }
 
   try {
-    const element = await driver.wait(until.elementLocated(locator), timeout);
+    const element = await driver.findElement(locator);
+    await driver.wait(until.elementIsVisible(element), timeout);
+    // const element = await driver.wait(until.elementLocated(locator), timeout);
     return element; // Kembalikan element yang ditemukan
   } catch (err) {
     if (screenshotOnFail) {
