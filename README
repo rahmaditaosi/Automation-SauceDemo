@@ -16,3 +16,12 @@ See `package.json` to see details dependencies
 - Run `npm run test`
 - The automation will be executed in headless mode
 -  The execution results will appear in the terminal
+
+
+#CUCUMBER
+- Run `npx cucumber-js` or `npm run test-cucumber`
+- Run Spesific tag `npx cucumber-js --tags [tag-name]`
+  example: npx cucumber-js --tags @Product
+
+#Cucumber generate report
+- Run `npm run report`

@@ -1,0 +1,734 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;user-can-login-with-valid-cradential",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "User can login with valid cradential",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 100430040
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on the login page",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/login_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1056850541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I login with valid credential",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/login_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125050166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I am logged in",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1768915
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52152207
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          },
+          {
+            "name": "@regresstion",
+            "line": 4
+          },
+          {
+            "name": "@web",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;login-failed-using-wrong-password",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Login failed using wrong password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 106521375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am on the login page",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/login_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 761757334
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I login with invalid credential",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/login_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113920375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I am not logged in",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/login_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7967624
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55423042
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          },
+          {
+            "name": "@negative-case",
+            "line": 10
+          },
+          {
+            "name": "@web",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [
+      {
+        "name": "@Login",
+        "line": 1
+      }
+    ],
+    "uri": "features/login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "product;user-can-see-product-list",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "User can see product list",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60088083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on the product page",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 867204334
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I view the product list",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5185040
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should see a list of products displayed",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 200499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55903333
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Product",
+            "line": 1
+          },
+          {
+            "name": "@Retrive-product",
+            "line": 4
+          },
+          {
+            "name": "@web",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "product;user-add-product-to-cart",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "User add product to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 101576958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am on the product page",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 964575791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I view the product list",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3797958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I Clicked the add to cart button",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33297042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "The number of items in my basket has increased",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112665
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55664708
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Product",
+            "line": 1
+          },
+          {
+            "name": "@AddToCart",
+            "line": 10
+          },
+          {
+            "name": "@web",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "product;user-add-product-more-than-1",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "User add product more than 1",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60436708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am on the product page",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 971818792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I view the product list",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3861874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I Clicked the add to cart button",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31259375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I Clicked the other add to cart button",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20370041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "The number of items in my basket has increased",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47958
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 54097584
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Product",
+            "line": 1
+          },
+          {
+            "name": "@AddToCart",
+            "line": 17
+          },
+          {
+            "name": "@web",
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "product;user-add-product-and-then-remove-the-item",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "User add product and then remove the item",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 102994749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "I am on the product page",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 893414083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I view the product list",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3552749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I Clicked the add to cart button",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32045082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I Clicked the remove button",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19093290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "The number of items in my basket has decreased",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/product_steps.js:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3163874
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 53439041
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Product",
+            "line": 1
+          },
+          {
+            "name": "@RemoveItemOnCart",
+            "line": 25
+          },
+          {
+            "name": "@web",
+            "line": 25
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "product",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Product",
+    "tags": [
+      {
+        "name": "@Product",
+        "line": 1
+      }
+    ],
+    "uri": "features/product.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "testing-123;adding-5-and-5-makes-10",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Adding 5 and 5 makes 10",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I Have a number 5",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I add the number 5",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I get a total of 10",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21208
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "testing-123;adding-3-and-5-makes-8",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Adding 3 and 5 makes 8",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I Have a number 3",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I add the number 5",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I get a total of 8",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7458
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "testing-123;adding-6-and-2-makes-8",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Adding 6 and 2 makes 8",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I Have a number 6",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I add the number 2",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I get a total of 8",
+            "match": {
+              "location": "file:/Users/putrihuriati/Documents/automation/Automation-SauceDemo/features/step_definitions/test_steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8208
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "testing-123",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Testing 123",
+    "tags": [],
+    "uri": "features/test.feature"
+  }
+]
