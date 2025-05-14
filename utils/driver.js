@@ -32,6 +32,7 @@ export async function createDriver() {
     options.addArguments('--no-sandbox');
     options.addArguments('--disable-dev-shm-usage');
     options.addArguments('incognito');
+    options.addArguments('--headless');
     
     // Set window size to avoid layout issues
     options.addArguments('--window-size=1920,1080');
