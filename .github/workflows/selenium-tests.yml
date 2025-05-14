@@ -43,4 +43,4 @@ jobs:
         env:
           CHROME_BIN: /usr/bin/google-chrome
           CHROME_HEADLESS: "true"
-        run: npx mocha tests/**/*.test.js --timeout 10000 --reporter mochawesome
+        run: npm run test 

@@ -5,9 +5,9 @@
     "passes": 8,
     "pending": 0,
     "failures": 0,
-    "start": "2025-05-14T14:21:43.138Z",
-    "end": "2025-05-14T14:22:07.208Z",
-    "duration": 24070,
+    "start": "2025-05-14T14:27:41.850Z",
+    "end": "2025-05-14T14:28:04.335Z",
+    "duration": 22485,
     "testsRegistered": 8,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9d8a3da9-c812-4d18-b9d1-d83ce153ea43",
+      "uuid": "a9c0e655-295a-4681-b281-9c7832404a0e",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bcaaded2-b4a5-4687-9f55-e713a02db12c",
+          "uuid": "dca1eb25-313e-41d0-90b8-9f0a7d576150",
           "title": "Login failed using blank all",
           "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_blank_all.test.js",
           "file": "\\tests\\login\\login_blank_all.test.js",
@@ -36,7 +36,7 @@
               "title": "\"before each\" hook in \"Login failed using blank all\"",
               "fullTitle": "Login failed using blank all \"before each\" hook in \"Login failed using blank all\"",
               "timedOut": false,
-              "duration": 1163,
+              "duration": 1149,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
               "err": {},
-              "uuid": "560f7aa1-918c-4cc2-acb2-ab135477513a",
-              "parentUUID": "bcaaded2-b4a5-4687-9f55-e713a02db12c",
+              "uuid": "164c912b-d01e-42fd-8c54-b4ac36aff09a",
+              "parentUUID": "dca1eb25-313e-41d0-90b8-9f0a7d576150",
               "isHook": true,
               "skipped": false
             }
@@ -55,6 +55,83 @@
             {
               "title": "\"after each\" hook in \"Login failed using blank all\"",
               "fullTitle": "Login failed using blank all \"after each\" hook in \"Login failed using blank all\"",
+              "timedOut": false,
+              "duration": 45,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
+              "err": {},
+              "uuid": "b07b9e1d-3ab3-4fba-8848-b9227405a611",
+              "parentUUID": "dca1eb25-313e-41d0-90b8-9f0a7d576150",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login failed using blank all",
+              "fullTitle": "Login failed using blank all Login failed using blank all",
+              "timedOut": false,
+              "duration": 1443,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
+              "err": {},
+              "uuid": "d1cd9d05-f03e-4068-88a9-27e7dfe0e352",
+              "parentUUID": "dca1eb25-313e-41d0-90b8-9f0a7d576150",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d1cd9d05-f03e-4068-88a9-27e7dfe0e352"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1443,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "e00fcc7a-5fcb-44a0-9840-1a7dbe535f30",
+          "title": "Login failed using blank password",
+          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_blank_password.test.js",
+          "file": "\\tests\\login\\login_blank_password.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login failed using blank password\"",
+              "fullTitle": "Login failed using blank password \"before each\" hook in \"Login failed using blank password\"",
+              "timedOut": false,
+              "duration": 1100,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
+              "err": {},
+              "uuid": "d35c1ca2-d976-49bc-a137-4218826880f7",
+              "parentUUID": "e00fcc7a-5fcb-44a0-9840-1a7dbe535f30",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login failed using blank password\"",
+              "fullTitle": "Login failed using blank password \"after each\" hook in \"Login failed using blank password\"",
               "timedOut": false,
               "duration": 47,
               "state": null,
@@ -65,85 +142,8 @@
               "context": null,
               "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
               "err": {},
-              "uuid": "ab794c56-5b06-4806-b733-47cfff24629d",
-              "parentUUID": "bcaaded2-b4a5-4687-9f55-e713a02db12c",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "tests": [
-            {
-              "title": "Login failed using blank all",
-              "fullTitle": "Login failed using blank all Login failed using blank all",
-              "timedOut": false,
-              "duration": 1620,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
-              "err": {},
-              "uuid": "f3d1f12c-2ae9-4f82-97e4-9dc532724b6b",
-              "parentUUID": "bcaaded2-b4a5-4687-9f55-e713a02db12c",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "f3d1f12c-2ae9-4f82-97e4-9dc532724b6b"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1620,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 10000
-        },
-        {
-          "uuid": "1fe1f0be-1917-44fb-ac01-f29d9b907484",
-          "title": "Login failed using blank password",
-          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_blank_password.test.js",
-          "file": "\\tests\\login\\login_blank_password.test.js",
-          "beforeHooks": [
-            {
-              "title": "\"before each\" hook in \"Login failed using blank password\"",
-              "fullTitle": "Login failed using blank password \"before each\" hook in \"Login failed using blank password\"",
-              "timedOut": false,
-              "duration": 1084,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
-              "err": {},
-              "uuid": "2125bef8-29c7-40a0-8e04-29f4f3e48006",
-              "parentUUID": "1fe1f0be-1917-44fb-ac01-f29d9b907484",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "afterHooks": [
-            {
-              "title": "\"after each\" hook in \"Login failed using blank password\"",
-              "fullTitle": "Login failed using blank password \"after each\" hook in \"Login failed using blank password\"",
-              "timedOut": false,
-              "duration": 77,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
-              "err": {},
-              "uuid": "0e859f79-d9f1-4f25-83fb-bf0d636cb2d7",
-              "parentUUID": "1fe1f0be-1917-44fb-ac01-f29d9b907484",
+              "uuid": "302f92d8-e17b-423f-9e34-85c92a51fbc6",
+              "parentUUID": "e00fcc7a-5fcb-44a0-9840-1a7dbe535f30",
               "isHook": true,
               "skipped": false
             }
@@ -153,7 +153,7 @@
               "title": "Login failed using blank password",
               "fullTitle": "Login failed using blank password Login failed using blank password",
               "timedOut": false,
-              "duration": 2153,
+              "duration": 1518,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -162,26 +162,26 @@
               "context": null,
               "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
               "err": {},
-              "uuid": "1bf9db9a-fc01-4b82-b031-834dc00d6642",
-              "parentUUID": "1fe1f0be-1917-44fb-ac01-f29d9b907484",
+              "uuid": "517b7792-6517-40aa-99af-ce8897d3176b",
+              "parentUUID": "e00fcc7a-5fcb-44a0-9840-1a7dbe535f30",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1bf9db9a-fc01-4b82-b031-834dc00d6642"
+            "517b7792-6517-40aa-99af-ce8897d3176b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2153,
+          "duration": 1518,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "b8bde6f1-ee1a-4ca8-b081-12e6e15f756b",
+          "uuid": "b73b7178-5026-47ce-88e3-af00f0c27498",
           "title": "Login failed using blank username",
           "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_blank_username.test.js",
           "file": "\\tests\\login\\login_blank_username.test.js",
@@ -190,7 +190,7 @@
               "title": "\"before each\" hook in \"Login failed using blank username\"",
               "fullTitle": "Login failed using blank username \"before each\" hook in \"Login failed using blank username\"",
               "timedOut": false,
-              "duration": 1076,
+              "duration": 1105,
               "state": null,
               "speed": null,
               "pass": false,
@@ -199,8 +199,8 @@
               "context": null,
               "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
               "err": {},
-              "uuid": "626adf63-d257-456b-95f3-45f523700c3b",
-              "parentUUID": "b8bde6f1-ee1a-4ca8-b081-12e6e15f756b",
+              "uuid": "60d3f381-14e6-41d8-9627-9451b1dd5e62",
+              "parentUUID": "b73b7178-5026-47ce-88e3-af00f0c27498",
               "isHook": true,
               "skipped": false
             }
@@ -209,391 +209,6 @@
             {
               "title": "\"after each\" hook in \"Login failed using blank username\"",
               "fullTitle": "Login failed using blank username \"after each\" hook in \"Login failed using blank username\"",
-              "timedOut": false,
-              "duration": 44,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
-              "err": {},
-              "uuid": "72931eaf-2fe1-4864-9ecc-a27e8799cfed",
-              "parentUUID": "b8bde6f1-ee1a-4ca8-b081-12e6e15f756b",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "tests": [
-            {
-              "title": "Login failed using blank username",
-              "fullTitle": "Login failed using blank username Login failed using blank username",
-              "timedOut": false,
-              "duration": 1562,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
-              "err": {},
-              "uuid": "94233238-7fa5-433d-a8ec-6440ea51b24c",
-              "parentUUID": "b8bde6f1-ee1a-4ca8-b081-12e6e15f756b",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "94233238-7fa5-433d-a8ec-6440ea51b24c"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1562,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 10000
-        },
-        {
-          "uuid": "eafd4fe2-dd1f-43b3-a9f4-fce1fc5117aa",
-          "title": "Login success using valid credential",
-          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_success.test.js",
-          "file": "\\tests\\login\\login_success.test.js",
-          "beforeHooks": [
-            {
-              "title": "\"before each\" hook in \"Login success using valid credential\"",
-              "fullTitle": "Login success using valid credential \"before each\" hook in \"Login success using valid credential\"",
-              "timedOut": false,
-              "duration": 1097,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
-              "err": {},
-              "uuid": "05bb3ed7-87f4-4cba-ab82-cfd7f02caf76",
-              "parentUUID": "eafd4fe2-dd1f-43b3-a9f4-fce1fc5117aa",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "afterHooks": [
-            {
-              "title": "\"after each\" hook in \"Login success using valid credential\"",
-              "fullTitle": "Login success using valid credential \"after each\" hook in \"Login success using valid credential\"",
-              "timedOut": false,
-              "duration": 68,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
-              "err": {},
-              "uuid": "5e1fe7d2-3791-4f07-b1d7-3736d1948972",
-              "parentUUID": "eafd4fe2-dd1f-43b3-a9f4-fce1fc5117aa",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "tests": [
-            {
-              "title": "Login success using valid credential",
-              "fullTitle": "Login success using valid credential Login success using valid credential",
-              "timedOut": false,
-              "duration": 1689,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
-              "err": {},
-              "uuid": "f2ea5f3e-a8de-48f9-bf3d-e829b0b2209c",
-              "parentUUID": "eafd4fe2-dd1f-43b3-a9f4-fce1fc5117aa",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "f2ea5f3e-a8de-48f9-bf3d-e829b0b2209c"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1689,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 10000
-        },
-        {
-          "uuid": "e5491c6c-1a6e-4f63-82f8-2268cf4115b0",
-          "title": "Login failed using wrong password",
-          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_wrong_password.test.js",
-          "file": "\\tests\\login\\login_wrong_password.test.js",
-          "beforeHooks": [
-            {
-              "title": "\"before each\" hook in \"Login failed using wrong password\"",
-              "fullTitle": "Login failed using wrong password \"before each\" hook in \"Login failed using wrong password\"",
-              "timedOut": false,
-              "duration": 1144,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
-              "err": {},
-              "uuid": "25d82512-89a9-4de5-847b-c027b22b1f6a",
-              "parentUUID": "e5491c6c-1a6e-4f63-82f8-2268cf4115b0",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "afterHooks": [
-            {
-              "title": "\"after each\" hook in \"Login failed using wrong password\"",
-              "fullTitle": "Login failed using wrong password \"after each\" hook in \"Login failed using wrong password\"",
-              "timedOut": false,
-              "duration": 44,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
-              "err": {},
-              "uuid": "e2e32ec0-943d-4aac-aa1b-3d1b141c79d8",
-              "parentUUID": "e5491c6c-1a6e-4f63-82f8-2268cf4115b0",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "tests": [
-            {
-              "title": "Login failed using wrong password",
-              "fullTitle": "Login failed using wrong password Login failed using wrong password",
-              "timedOut": false,
-              "duration": 1529,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
-              "err": {},
-              "uuid": "a72f30bd-eaa3-4aef-b8dc-e7109b3e7d08",
-              "parentUUID": "e5491c6c-1a6e-4f63-82f8-2268cf4115b0",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "a72f30bd-eaa3-4aef-b8dc-e7109b3e7d08"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1529,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 10000
-        },
-        {
-          "uuid": "7ed5ddec-dc67-4100-8dc6-234c66a108b7",
-          "title": "Login failed using wrong username",
-          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_wrong_username.test.js",
-          "file": "\\tests\\login\\login_wrong_username.test.js",
-          "beforeHooks": [
-            {
-              "title": "\"before each\" hook in \"Login failed using wrong username\"",
-              "fullTitle": "Login failed using wrong username \"before each\" hook in \"Login failed using wrong username\"",
-              "timedOut": false,
-              "duration": 1152,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
-              "err": {},
-              "uuid": "8735ed15-402f-4784-a4eb-5f0f67530859",
-              "parentUUID": "7ed5ddec-dc67-4100-8dc6-234c66a108b7",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "afterHooks": [
-            {
-              "title": "\"after each\" hook in \"Login failed using wrong username\"",
-              "fullTitle": "Login failed using wrong username \"after each\" hook in \"Login failed using wrong username\"",
-              "timedOut": false,
-              "duration": 72,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
-              "err": {},
-              "uuid": "15b1ae98-fa11-4a57-8e3e-5885c7d665c8",
-              "parentUUID": "7ed5ddec-dc67-4100-8dc6-234c66a108b7",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "tests": [
-            {
-              "title": "Login failed using wrong username",
-              "fullTitle": "Login failed using wrong username Login failed using wrong username",
-              "timedOut": false,
-              "duration": 1482,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
-              "err": {},
-              "uuid": "c162a3b4-fcd5-4d0f-9598-90098c277c6b",
-              "parentUUID": "7ed5ddec-dc67-4100-8dc6-234c66a108b7",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "c162a3b4-fcd5-4d0f-9598-90098c277c6b"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1482,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 10000
-        },
-        {
-          "uuid": "28926315-de63-476a-b485-72f5911af7cb",
-          "title": "Retrieve all data products",
-          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\product\\list_all_product.test.js",
-          "file": "\\tests\\product\\list_all_product.test.js",
-          "beforeHooks": [
-            {
-              "title": "\"before each\" hook in \"Retrieve all data products\"",
-              "fullTitle": "Retrieve all data products \"before each\" hook in \"Retrieve all data products\"",
-              "timedOut": false,
-              "duration": 1121,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
-              "err": {},
-              "uuid": "a6814fe0-afe2-4846-9de1-0235f413e06e",
-              "parentUUID": "28926315-de63-476a-b485-72f5911af7cb",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "afterHooks": [
-            {
-              "title": "\"after each\" hook in \"Retrieve all data products\"",
-              "fullTitle": "Retrieve all data products \"after each\" hook in \"Retrieve all data products\"",
-              "timedOut": false,
-              "duration": 42,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
-              "err": {},
-              "uuid": "d6af6e27-105c-4a59-a692-a34996aa3cac",
-              "parentUUID": "28926315-de63-476a-b485-72f5911af7cb",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "tests": [
-            {
-              "title": "Retrieve all data products",
-              "fullTitle": "Retrieve all data products Retrieve all data products",
-              "timedOut": false,
-              "duration": 1650,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
-              "err": {},
-              "uuid": "35d7f6c8-3a54-4d4a-a640-193c3b4dc881",
-              "parentUUID": "28926315-de63-476a-b485-72f5911af7cb",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "35d7f6c8-3a54-4d4a-a640-193c3b4dc881"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1650,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 10000
-        },
-        {
-          "uuid": "e4dd619e-0ea8-400a-86c3-bea56788b923",
-          "title": "Sorting all data products from Price low to high",
-          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\product\\sorting product.test.js",
-          "file": "\\tests\\product\\sorting product.test.js",
-          "beforeHooks": [
-            {
-              "title": "\"before each\" hook in \"Sorting all data products from Price low to high\"",
-              "fullTitle": "Sorting all data products from Price low to high \"before each\" hook in \"Sorting all data products from Price low to high\"",
-              "timedOut": false,
-              "duration": 1111,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
-              "err": {},
-              "uuid": "ad635212-b65e-4873-9f3a-6ac72a0e03bb",
-              "parentUUID": "e4dd619e-0ea8-400a-86c3-bea56788b923",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "afterHooks": [
-            {
-              "title": "\"after each\" hook in \"Sorting all data products from Price low to high\"",
-              "fullTitle": "Sorting all data products from Price low to high \"after each\" hook in \"Sorting all data products from Price low to high\"",
               "timedOut": false,
               "duration": 67,
               "state": null,
@@ -604,8 +219,393 @@
               "context": null,
               "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
               "err": {},
-              "uuid": "7102eed9-5d71-40e5-a1ff-3cf88e3c7abe",
-              "parentUUID": "e4dd619e-0ea8-400a-86c3-bea56788b923",
+              "uuid": "eaaa44c1-f324-47b3-867e-e6efdb7be550",
+              "parentUUID": "b73b7178-5026-47ce-88e3-af00f0c27498",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login failed using blank username",
+              "fullTitle": "Login failed using blank username Login failed using blank username",
+              "timedOut": false,
+              "duration": 1437,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
+              "err": {},
+              "uuid": "b2b38a1e-e791-4f68-b996-26fc52cc6d86",
+              "parentUUID": "b73b7178-5026-47ce-88e3-af00f0c27498",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b2b38a1e-e791-4f68-b996-26fc52cc6d86"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1437,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "4cb4d354-66c0-44a0-9aa6-fbe787b31b82",
+          "title": "Login success using valid credential",
+          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_success.test.js",
+          "file": "\\tests\\login\\login_success.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login success using valid credential\"",
+              "fullTitle": "Login success using valid credential \"before each\" hook in \"Login success using valid credential\"",
+              "timedOut": false,
+              "duration": 1096,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
+              "err": {},
+              "uuid": "6c651068-27f3-4c88-96fb-e3781bda90ff",
+              "parentUUID": "4cb4d354-66c0-44a0-9aa6-fbe787b31b82",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login success using valid credential\"",
+              "fullTitle": "Login success using valid credential \"after each\" hook in \"Login success using valid credential\"",
+              "timedOut": false,
+              "duration": 40,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
+              "err": {},
+              "uuid": "cfb5132c-63ac-42c3-b82f-d16329dfde1c",
+              "parentUUID": "4cb4d354-66c0-44a0-9aa6-fbe787b31b82",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login success using valid credential",
+              "fullTitle": "Login success using valid credential Login success using valid credential",
+              "timedOut": false,
+              "duration": 1540,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
+              "err": {},
+              "uuid": "15ab247f-a69e-4eb3-a5fb-9739d8c711b6",
+              "parentUUID": "4cb4d354-66c0-44a0-9aa6-fbe787b31b82",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "15ab247f-a69e-4eb3-a5fb-9739d8c711b6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1540,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "cf404388-c34d-4500-af0d-47125deb8b94",
+          "title": "Login failed using wrong password",
+          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_wrong_password.test.js",
+          "file": "\\tests\\login\\login_wrong_password.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login failed using wrong password\"",
+              "fullTitle": "Login failed using wrong password \"before each\" hook in \"Login failed using wrong password\"",
+              "timedOut": false,
+              "duration": 1099,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
+              "err": {},
+              "uuid": "e0ba5e3a-962f-4340-8145-2313809e6a9b",
+              "parentUUID": "cf404388-c34d-4500-af0d-47125deb8b94",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login failed using wrong password\"",
+              "fullTitle": "Login failed using wrong password \"after each\" hook in \"Login failed using wrong password\"",
+              "timedOut": false,
+              "duration": 83,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
+              "err": {},
+              "uuid": "14ab9f7f-35ad-4bd0-9261-8a304336d9d8",
+              "parentUUID": "cf404388-c34d-4500-af0d-47125deb8b94",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login failed using wrong password",
+              "fullTitle": "Login failed using wrong password Login failed using wrong password",
+              "timedOut": false,
+              "duration": 1582,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
+              "err": {},
+              "uuid": "a7bdbd3e-29c7-4c09-be3b-033b4ff0eb9e",
+              "parentUUID": "cf404388-c34d-4500-af0d-47125deb8b94",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a7bdbd3e-29c7-4c09-be3b-033b4ff0eb9e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1582,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "5374b9aa-e79b-43c7-80d1-5afa691e91c3",
+          "title": "Login failed using wrong username",
+          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\login\\login_wrong_username.test.js",
+          "file": "\\tests\\login\\login_wrong_username.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login failed using wrong username\"",
+              "fullTitle": "Login failed using wrong username \"before each\" hook in \"Login failed using wrong username\"",
+              "timedOut": false,
+              "duration": 1118,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
+              "err": {},
+              "uuid": "c94d7466-bb08-4aa0-b03a-7f2ccec1969c",
+              "parentUUID": "5374b9aa-e79b-43c7-80d1-5afa691e91c3",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login failed using wrong username\"",
+              "fullTitle": "Login failed using wrong username \"after each\" hook in \"Login failed using wrong username\"",
+              "timedOut": false,
+              "duration": 47,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
+              "err": {},
+              "uuid": "953a041d-9e7a-4ab0-acda-2f0651f40df3",
+              "parentUUID": "5374b9aa-e79b-43c7-80d1-5afa691e91c3",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login failed using wrong username",
+              "fullTitle": "Login failed using wrong username Login failed using wrong username",
+              "timedOut": false,
+              "duration": 1690,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
+              "err": {},
+              "uuid": "0e8613f6-a783-4480-88e8-d25499f3ae19",
+              "parentUUID": "5374b9aa-e79b-43c7-80d1-5afa691e91c3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0e8613f6-a783-4480-88e8-d25499f3ae19"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1690,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "3e3a4baa-f727-47f6-b62e-e538158f280e",
+          "title": "Retrieve all data products",
+          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\product\\list_all_product.test.js",
+          "file": "\\tests\\product\\list_all_product.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Retrieve all data products\"",
+              "fullTitle": "Retrieve all data products \"before each\" hook in \"Retrieve all data products\"",
+              "timedOut": false,
+              "duration": 1071,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
+              "err": {},
+              "uuid": "b401b6e5-fddc-4ab2-9a8f-8b6d4b69ad0f",
+              "parentUUID": "3e3a4baa-f727-47f6-b62e-e538158f280e",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Retrieve all data products\"",
+              "fullTitle": "Retrieve all data products \"after each\" hook in \"Retrieve all data products\"",
+              "timedOut": false,
+              "duration": 68,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
+              "err": {},
+              "uuid": "53d0eada-1ce8-4279-b4a7-197f63bebaf1",
+              "parentUUID": "3e3a4baa-f727-47f6-b62e-e538158f280e",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Retrieve all data products",
+              "fullTitle": "Retrieve all data products Retrieve all data products",
+              "timedOut": false,
+              "duration": 1455,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
+              "err": {},
+              "uuid": "ebbc058a-3284-46fa-8b04-58f15ac5830c",
+              "parentUUID": "3e3a4baa-f727-47f6-b62e-e538158f280e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebbc058a-3284-46fa-8b04-58f15ac5830c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1455,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "8b363dab-ac36-4109-9592-976d53a1c02e",
+          "title": "Sorting all data products from Price low to high",
+          "fullFile": "D:\\Osi\\Automation-SauceDemo\\tests\\product\\sorting product.test.js",
+          "file": "\\tests\\product\\sorting product.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Sorting all data products from Price low to high\"",
+              "fullTitle": "Sorting all data products from Price low to high \"before each\" hook in \"Sorting all data products from Price low to high\"",
+              "timedOut": false,
+              "duration": 1135,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    driver = await createDriver();\n} catch (err) {\n    console.error('❌ Gagal createDriver di before hook:', err);\n    throw err;\n}",
+              "err": {},
+              "uuid": "2e5c48f9-1c31-451f-975a-b132989ece79",
+              "parentUUID": "8b363dab-ac36-4109-9592-976d53a1c02e",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Sorting all data products from Price low to high\"",
+              "fullTitle": "Sorting all data products from Price low to high \"after each\" hook in \"Sorting all data products from Price low to high\"",
+              "timedOut": false,
+              "duration": 96,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    try {\n        await driver.quit();\n    } catch (err) {\n        console.error('❌ Gagal quit di after hook:', err);\n        throw err;\n    }\n}",
+              "err": {},
+              "uuid": "1ea32967-2772-40ae-9c2f-b822c6078f1f",
+              "parentUUID": "8b363dab-ac36-4109-9592-976d53a1c02e",
               "isHook": true,
               "skipped": false
             }
@@ -615,7 +615,7 @@
               "title": "Sorting all data products from Price low to high",
               "fullTitle": "Sorting all data products from Price low to high Sorting all data products from Price low to high",
               "timedOut": false,
-              "duration": 2950,
+              "duration": 2430,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -624,20 +624,20 @@
               "context": null,
               "code": "try {\n    if(!driver) {\n        throw new Error('Driver tidak tersedia untuk pengujian!')\n    }\n    // Jalankan fungsi test yang diberikan dengan driver\n    await testFn(driver);\n} catch (error) {\n    console.error('Test failed with error:', error);\n    throw error;\n}",
               "err": {},
-              "uuid": "102fa78a-55c9-4009-9bbe-504c5455e1ff",
-              "parentUUID": "e4dd619e-0ea8-400a-86c3-bea56788b923",
+              "uuid": "224b092f-983e-4b18-93aa-54a43862e261",
+              "parentUUID": "8b363dab-ac36-4109-9592-976d53a1c02e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "102fa78a-55c9-4009-9bbe-504c5455e1ff"
+            "224b092f-983e-4b18-93aa-54a43862e261"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2950,
+          "duration": 2430,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
