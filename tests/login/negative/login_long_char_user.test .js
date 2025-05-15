@@ -1,13 +1,15 @@
-import { baseTest } from '../../utils/baseTest.js';
-import { safeClick, safeSendKeys, safeFindElement } from '../../utils/helpers.js';
+import { baseTest } from '../../../utils/baseTest.js';
+import { safeClick, safeSendKeys, safeFindElement } from '../../../utils/helpers.js';
 import { By, until } from 'selenium-webdriver';
 import { expect } from 'chai';
 
-baseTest('Login failed using wrong password', async (driver) => {
+baseTest('Login failed with locked out user', async (driver) => {
   await driver.get('https://www.saucedemo.com'); // Visit URL
 
-  await safeSendKeys(driver, By.id('user-name'), 'standard_user'); // Input username
-  await safeSendKeys(driver, By.id('password'), 'osi_admin'); // Input password
+  const longString = 'a'.repeat(1000); // Create a very long string
+
+  await safeSendKeys(driver, By.id('user-name'), longString); // Input username
+  await safeSendKeys(driver, By.id('password'), longString); // Input password
   await safeClick(driver, By.id('login-button')); // Click button Login
 
   const errorElement = await safeFindElement(driver, By.css('[data-test="error"]'), 10000);

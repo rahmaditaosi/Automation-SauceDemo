@@ -1,14 +1,17 @@
-import { baseTest } from '../../utils/baseTest.js';
-import { safeClick, safeSendKeys, safeFindElement } from '../../utils/helpers.js';
+import { baseTest } from '../../../utils/baseTest.js';
+import { safeClick, safeSendKeys, safeFindElement } from '../../../utils/helpers.js';
 import { By, until } from 'selenium-webdriver';
 import { expect } from 'chai';
 
-baseTest('Login success using valid credential', async (driver) => {
+baseTest('Login successful with problem_user', async (driver) => {
   await driver.get('https://www.saucedemo.com'); // Visit URL
 
-  await safeSendKeys(driver, By.id('user-name'), 'standard_user'); // Input username
+  await safeSendKeys(driver, By.id('user-name'), 'problem_user'); // Input username
   await safeSendKeys(driver, By.id('password'), 'secret_sauce'); // Input password
   await safeClick(driver, By.id('login-button')); // Click button Login
+
+// Verify successful login by checking for inventory container
+  await safeFindElement(driver, By.id('inventory_container'), 10000);
 
   await driver.wait(until.urlContains('inventory'), 10000); // Wait for URL to contain 'inventory'
 

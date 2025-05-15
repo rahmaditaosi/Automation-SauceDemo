@@ -18,20 +18,10 @@ export const DEFAULT_CONFIG = {
  * @param {boolean} screenshotOnFail - Whether to take a screenshot on failure
  * @returns {Promise<boolean>} - True if the element contains the text
  */
-export async function waitForText(
-  driver,
-  locator,
-  text,
-  timeout = DEFAULT_CONFIG.timeout,
-  screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail
-) {
+export async function waitForText(driver, locator, text, timeout = DEFAULT_CONFIG.timeout, screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail) {
   try {
     const element = await safeFindElement(driver, locator, timeout, false);
-    await driver.wait(
-      until.elementTextIs(element, text),
-      timeout,
-      `Element text did not match "${text}" within ${timeout}ms`
-    );
+    await driver.wait(until.elementTextIs(element, text), timeout, `Element text did not match "${text}" within ${timeout}ms`);
     return true;
   } catch (err) {
     if (screenshotOnFail) {
@@ -49,26 +39,11 @@ export async function waitForText(
  * @param {boolean} screenshotOnFail - Whether to take a screenshot on failure
  * @returns {Promise<WebElement>} - The found element
  */
-export async function safeFindElement(
-  driver,
-  locator,
-  timeout = DEFAULT_CONFIG.timeout,
-  screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail
-) {
+export async function safeFindElement(driver, locator, timeout = DEFAULT_CONFIG.timeout, screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail) {
   try {
     // Wait for the element to be both located and visible
-    const element = await driver.wait(
-      until.elementLocated(locator),
-      timeout,
-      `Element not found within ${timeout}ms: ${locator.toString()}`
-    );
-
-    await driver.wait(
-      until.elementIsVisible(element),
-      timeout,
-      `Element not visible within ${timeout}ms: ${locator.toString()}`
-    );
-
+    const element = await driver.wait(until.elementLocated(locator), timeout, `Element not found within ${timeout}ms: ${locator.toString()}`);
+    await driver.wait(until.elementIsVisible(element), timeout, `Element not visible within ${timeout}ms: ${locator.toString()}`);
     return element;
   } catch (err) {
     if (screenshotOnFail) {
@@ -86,21 +61,12 @@ export async function safeFindElement(
  * @param {boolean} screenshotOnFail - Whether to take a screenshot on failure
  * @returns {Promise<void>}
  */
-export async function safeClick(
-  driver,
-  locator,
-  timeout = DEFAULT_CONFIG.timeout,
-  screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail
-) {
+export async function safeClick(driver, locator, timeout = DEFAULT_CONFIG.timeout, screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail) {
   try {
     const element = await safeFindElement(driver, locator, timeout, false);
 
     // Wait for the element to be enabled before clicking
-    await driver.wait(
-      until.elementIsEnabled(element),
-      timeout,
-      `Element not enabled within ${timeout}ms: ${locator.toString()}`
-    );
+    await driver.wait(until.elementIsEnabled(element), timeout, `Element not enabled within ${timeout}ms: ${locator.toString()}`);
 
     // Sometimes elements can be covered by other elements, like tooltips or modals
     // Scroll element into view to improve reliability
@@ -127,13 +93,7 @@ export async function safeClick(
  * @param {boolean} screenshotOnFail - Whether to take a screenshot on failure
  * @returns {Promise<void>}
  */
-export async function safeSendKeys(
-  driver,
-  locator,
-  text,
-  timeout = DEFAULT_CONFIG.timeout,
-  screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail
-) {
+export async function safeSendKeys(driver, locator, text, timeout = DEFAULT_CONFIG.timeout, screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail) {
   try {
     const element = await safeFindElement(driver, locator, timeout, false);
 
@@ -194,22 +154,14 @@ export async function loginSuccess(driver, username, password) {
   await driver.get('https://saucedemo.com');
 
   // Add a wait for page load to improve reliability
-  await driver.wait(
-    until.titleIs('Swag Labs'),
-    DEFAULT_CONFIG.timeout,
-    'SauceDemo page did not load correctly'
-  );
+  await driver.wait(until.titleIs('Swag Labs'), DEFAULT_CONFIG.timeout, 'SauceDemo page did not load correctly');
 
   await safeSendKeys(driver, By.id('user-name'), username);
   await safeSendKeys(driver, By.id('password'), password);
   await safeClick(driver, By.id('login-button'));
 
   // Verify login was successful by checking for inventory page
-  await driver.wait(
-    until.urlContains('/inventory.html'),
-    DEFAULT_CONFIG.timeout,
-    'Login was not successful, inventory page not loaded'
-  );
+  await driver.wait(until.urlContains('/inventory.html'), DEFAULT_CONFIG.timeout, 'Login was not successful, inventory page not loaded');
 }
 
 /**
@@ -229,19 +181,10 @@ export function sleep(ms) {
  * @param {boolean} screenshotOnFail - Whether to take a screenshot on failure
  * @returns {Promise<WebElement[]>} - Array of found elements
  */
-export async function safeFindElements(
-  driver,
-  locator,
-  timeout = DEFAULT_CONFIG.timeout,
-  screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail
-) {
+export async function safeFindElements(driver, locator, timeout = DEFAULT_CONFIG.timeout, screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail) {
   try {
     // First, wait for at least one element to be present
-    await driver.wait(
-      until.elementLocated(locator),
-      timeout,
-      `No elements found with locator: ${locator.toString()} within ${timeout}ms`
-    );
+    await driver.wait(until.elementLocated(locator), timeout, `No elements found with locator: ${locator.toString()} within ${timeout}ms`);
 
     // Then get all matching elements
     const elements = await driver.findElements(locator);
@@ -266,13 +209,17 @@ export async function safeFindElements(
  * @param {number} timeout - Wait timeout in ms
  * @returns {Promise<string>} - The text content of the element
  */
-export async function safeGetText(
-  driver,
-  locator,
-  timeout = DEFAULT_CONFIG.timeout
-) {
-  const element = await safeFindElement(driver, locator, timeout);
-  return element.getText();
+export async function safeGetText(driver, locator, timeout = DEFAULT_CONFIG.timeout, screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail) {
+  try {
+    const element = await safeFindElement(driver, locator, timeout, false);
+    const text = await element.getText();
+    return text;
+  } catch (err) {
+    if (screenshotOnFail) {
+      await captureScreenshot(driver, DEFAULT_CONFIG.screenshotFolder);
+    }
+    throw new Error(`❌ Failed to get text from element with locator: ${locator.toString()}. Error: ${err.message}`);
+  }
 }
 
 /**
@@ -282,11 +229,7 @@ export async function safeGetText(
  * @param {boolean} screenshotOnFail - Whether to take screenshot on failure (default: true)
  * @returns {Promise<void>}
  */
-export async function AddToCart(
-  driver,
-  numItems = 1,
-  screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail
-) {
+export async function AddToCart(driver,numItems = 1,screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail) {
   try {
     // Add specified number of items
     const addButtons = [
@@ -295,7 +238,7 @@ export async function AddToCart(
       'add-to-cart-sauce-labs-bolt-t-shirt',
       'add-to-cart-sauce-labs-fleece-jacket'
     ];
-    
+
     for (let i = 0; i < Math.min(numItems, addButtons.length); i++) {
       try {
         await safeClick(driver, By.id(addButtons[i]));
@@ -307,7 +250,7 @@ export async function AddToCart(
         // Continue with next item even if one fails
       }
     }
-    
+
     // Go to cart
     try {
       await safeClick(driver, By.className('shopping_cart_link'));
@@ -334,13 +277,7 @@ export async function AddToCart(
  * @param {boolean} screenshotOnFail - Whether to take screenshot on failure
  * @returns {Promise<void>}
  */
-export async function fillCheckoutInfo(
-  driver,
-  firstName,
-  lastName,
-  zipCode,
-  screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail
-) {
+export async function fillCheckoutInfo(driver,firstName,lastName,zipCode,screenshotOnFail = DEFAULT_CONFIG.screenshotOnFail) {
   try {
     // Fill first name field
     try {

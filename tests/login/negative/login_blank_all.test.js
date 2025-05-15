@@ -1,12 +1,12 @@
-import { baseTest } from '../../utils/baseTest.js';
-import { safeClick, safeSendKeys, safeFindElement } from '../../utils/helpers.js';
+import { baseTest } from '../../../utils/baseTest.js';
+import { safeClick, safeSendKeys, safeFindElement } from '../../../utils/helpers.js';
 import { By, until } from 'selenium-webdriver';
 import { expect } from 'chai';
 
-baseTest('Login failed using blank password', async (driver) => {
+baseTest('Login failed using blank all', async (driver) => {
   await driver.get('https://www.saucedemo.com'); // Visit URL
 
-  await safeSendKeys(driver, By.id('user-name'), 'standard_user'); // Input username
+  await safeSendKeys(driver, By.id('user-name'), ''); // Input username
   await safeSendKeys(driver, By.id('password'), ''); // Input password
   await safeClick(driver, By.id('login-button')); // Click button Login
 
@@ -14,5 +14,5 @@ baseTest('Login failed using blank password', async (driver) => {
 
   // Verifikasi apakah teks error sesuai menggunakan expect
   const errorText = await errorElement.getText();
-  expect(errorText).to.include('Epic sadface: Password is required'); // Assertion dengan expect
+  expect(errorText).to.include('Epic sadface: Username is required'); // Assertion dengan expect
 });
