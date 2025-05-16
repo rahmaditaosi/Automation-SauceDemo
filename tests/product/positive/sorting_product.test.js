@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import { baseTest } from '../../utils/baseTest.js';
-import { loginSuccess, safeClick, safeFindElement } from '../../utils/helpers.js';
+import { baseTest } from '../../../utils/baseTest.js';
+import { loginSuccess, safeClick, safeFindElement } from '../../../utils/helpers.js';
 import { By, until } from 'selenium-webdriver';
 
 baseTest('Sorting all data products from Price low to high', async (driver) => {
