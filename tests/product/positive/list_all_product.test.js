@@ -25,7 +25,51 @@ baseTest('Retrieve all data products', async (driver) => {
     expect(productPrice.length).to.be.greaterThan(0);
 
     //button
-    const productButton = await safeGetText(driver,By.css('button[id^="add-to-cart"]'), 10000);
+    const productButton = await safeGetText(driver, By.css('button[id^="add-to-cart"]'), 10000);
     expect(productButton).to.equal('Add to cart');
   }
 });
+
+// baseTest('Retrieve all detail data products', async (driver) => {
+//   await loginSuccess(driver, 'standard_user', 'secret_sauce');
+//   await safeFindElement(driver, By.css('.inventory_container'), 10000);
+//   const products = await safeFindElements(driver, By.css('[data-test="inventory-item"]'), 10000); // Get All products
+
+//   for (let i = 0; i < products.length; i++) {
+
+//     if (i > 0) {
+//       const currentProducts = await safeFindElements(driver, By.css('[data-test="inventory-item"]'), 10000);
+//       const currentProduct = currentProducts[i];
+
+//       // Click on the product name within the specific product context
+//       const productLink = await currentProduct.findElement(By.css('.inventory_item_name'));
+//       await productLink.click();
+//     } else {
+//       const product = products[i];
+
+//       // Click on the product name within the specific product context
+//       const productLink = await product.findElement(By.css('.inventory_item_name'));
+//       await productLink.click();
+//     }
+
+//     // Wait for detail page
+//     await safeFindElement(driver, By.css('.inventory_details'), 10000);
+
+//     //name
+//     const detailName = await safeGetText(driver, By.css('.inventory_details_name'), 10000);
+//     expect(detailName.length).to.be.greaterThan(0);
+
+//     //description
+//     const detailDesc = await safeGetText(driver, By.css('.inventory_details_desc'), 10000);
+//     expect(detailDesc.length).to.be.greaterThan(0);
+
+//     //price
+//     const detailPrice = await safeGetText(driver, By.css('.inventory_details_price'), 10000);
+//     expect(detailPrice.length).to.be.greaterThan(0);
+
+//     //button
+//     const productButton = await safeGetText(driver, By.css('button[id^="add-to-cart"]'), 10000);
+//     expect(productButton).to.equal('Add to cart');
+//   }
+// });
+
